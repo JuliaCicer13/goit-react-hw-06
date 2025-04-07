@@ -1,0 +1,34 @@
+.titleCast {
+    align-items: center;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 100px;
+    margin-left: 40px;
+    color: blue;
+}
+
+.styleCast {
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: rgb(156, 99, 202);
+}
+
+.backButton {
+    color: aqua;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.backButton:hover {
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-overflow: initial;
+    text-decoration-color: blueviolet;
+   
+}
