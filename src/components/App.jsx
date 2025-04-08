@@ -1,11 +1,15 @@
 import css from './styles/App.module.css';
-import Navigation from "../components/Navigation";
+import StatusFilter from '../components/StatusFilter';
+import MyComponent from "../components/MyComponent";
+import TaskList from "../components/TaskList";
 export default function App() {
 
   /* Остальной код */
   return (
     <div className={css.container}>
-      <Navigation/>
+      <MyComponent />
+      <StatusFilter />
+      <TaskList/>
     </div>
   )
 }
