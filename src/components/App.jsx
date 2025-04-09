@@ -1,17 +1,14 @@
-import css from './styles/App.module.css';
-import StatusFilter from '../components/StatusFilter';
-import MyComponent from "../components/MyComponent";
-import TaskList from "../components/TaskList";
-export default function App() {
+import { Layout } from '../Layout/Layout';
+import { AppBar } from '../AppBar/AppBar';
+import { ContactsForm } from '../components/ContactsForm';
+import { ContactList } from '../components/ContactList';
 
-  /* Остальной код */
+export const App = () => {
   return (
-    <div className={css.container}>
-      <MyComponent />
-      <StatusFilter />
-      <TaskList/>
-    </div>
-  )
-}
-
-  
+    <Layout>
+      <AppBar />
+      <ContactsForm />
+      <ContactList />
+    </Layout>
+  );
+};
