@@ -1,16 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { useDispatch } from "react-redux"; 
 
 const slice = createSlice({
-  name: 'tasks',
+  
+  name: 'contacts',
   initialState: {
     items: [
-      { id: 0, text: 'Learn HTML and CSS', completed: true },
-      { id: 1, text: 'Get good at JavaScript', completed: true },
-      { id: 2, text: 'Master React', completed: false },
-      { id: 3, text: 'Discover Redux', completed: false },
-      { id: 4, text: 'Build amazing apps', completed: false },
-    ],
-  },
+  {id: 1, name: "Rosie Simpson", number: 459-12-56},
+  {id: 2, name: "Hermione Kline", number: 443-89-1 },
+  {id: 3, name: "Eden Clements",number: 645 - 17 - 79},
+  {id: 4, name: "Annie Copeland", number: 227-91-26 }
+  ]
+},
   reducers: {
     addContact: (state, action) => {
       state.items.push(action.payload);

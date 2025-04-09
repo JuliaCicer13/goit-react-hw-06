@@ -1,6 +1,5 @@
 // 1. Імпортуємо хук
 import { useDispatch } from "react-redux";
-
 import { deleteContact} from "../redux/contactsSlice";
 
 export const Contact = ({ contact }) => {
@@ -16,7 +15,7 @@ export const Contact = ({ contact }) => {
     <div>
       <input 
 	    type="checkbox" 
-		checked={contact.completed} 
+		  checked={contact.completed} 
 	  />
       <p>{contact.text}</p>
       <button onClick={handleDelete}>Delete</button>
