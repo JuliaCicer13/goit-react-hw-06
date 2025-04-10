@@ -1,28 +1,28 @@
 import { useSelector } from 'react-redux';
 import  Contacts from '../components/Contacts';
 
-const getVisibleContacts = (contacts, statusFilter) => {
+const getVisibleContacts = ( items, statusFilter) => {
     switch (statusFilter) {
         case 'active':
-            return contacts.filter((contacts) => !contacts.completed);
+            return  items.filter(( items) => ! items.completed);
         case 'complited':
-            return contacts.filter((contacts) => contacts.completed);
+            return  items.filter(( items) =>  items.completed);
         default:
-            return contacts;
+            return  items;
         
   }
 } 
 
 export const ContactList = () => {
-    const contacts = useSelector((state) => state.contacts.status);
+    const items= useSelector((state) => state.items.status);
     const statusFilter = useSelector((state) => state.filters.status);
-    const visibleContacts = getVisibleContacts(contacts, statusFilter);
+    const visibleContacts = getVisibleContacts( items, statusFilter);
 
     return (
         <ul>
-            {visibleContacts.map((contacts) => (
-                <li key={contacts.id} >
-                    <Contacts contacts={contacts} />
+            {visibleContacts.map(( item) => (
+                <li key={ item.id} >
+                    <Contacts contact={ item} />
                 </li>
             ))}
         </ul>
