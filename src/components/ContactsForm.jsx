@@ -1,4 +1,4 @@
-import { Button } from '../Button/Button';
+import { Button } from '../components/Button';
 import { useDispatch } from "react-redux";
 import { addContact } from "../redux/contactsSlice";
 

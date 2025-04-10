@@ -1,14 +1,14 @@
-import { Layout } from '../Layout/Layout';
-import { AppBar } from '../AppBar/AppBar';
+import { AppBar } from '../components/AppBar';
 import { ContactsForm } from '../components/ContactsForm';
-import { ContactList } from '../components/ContactList';
+import { ContactList }  from '../components/ContactList';
 
-export const App = () => {
+export default function App ()  {
   return (
-    <Layout>
+    <>
       <AppBar />
       <ContactsForm />
       <ContactList />
-    </Layout>
+    </>
+    
   );
 };

@@ -2,7 +2,7 @@
 import { useDispatch } from "react-redux";
 import { deleteContact} from "../redux/contactsSlice";
 
-export const Contact = ({ contact }) => {
+export default function Contact  ({ contact })  {
 
   const dispatch = useDispatch();
 

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
-import { Contacts } from '../components/Contacts';
+import  Contacts from '../components/Contacts';
 
-export default function getVisibleContacts(contacts, statusFilter) {
+const getVisibleContacts = (contacts, statusFilter) => {
     switch (statusFilter) {
         case 'active':
             return contacts.filter((contacts) => !contacts.completed);
@@ -13,20 +13,16 @@ export default function getVisibleContacts(contacts, statusFilter) {
   }
 } 
 
-function ContactList ({onDelete})  {
+export const ContactList = () => {
     const contacts = useSelector((state) => state.contacts.status);
     const statusFilter = useSelector((state) => state.filters.status);
     const visibleContacts = getVisibleContacts(contacts, statusFilter);
 
     return (
         <ul>
-            {visibleContacts.map((user) => (
-                <li key={user.id} >
-                    <Contacts
-                          id={user.id}
-                          name={user.name}
-                          number={user.number}
-                          onDelete={onDelete} />
+            {visibleContacts.map((contacts) => (
+                <li key={contacts.id} >
+                    <Contacts contacts={contacts} />
                 </li>
             ))}
         </ul>
