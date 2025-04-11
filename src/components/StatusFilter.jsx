@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDisspatch } from 'react-redux';
 import { Button } from '../components/Button';
 import { setStatusFilter } from '../redux/filtersSlice';
 import css from '../components/styles/StatusFilter.module.css';
