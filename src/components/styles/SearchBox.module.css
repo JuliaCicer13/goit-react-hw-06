@@ -1,1 +1,38 @@
+.wrap {
+    align-items: center;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    margin-left: 350px;
+    margin-bottom: 20px;
+}
 
+.label {
+    text-align: center;
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #c61c25;
+    margin-right: 15px;
+}
+
+.input {
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid #c61c25;
+    border-radius: 5px;
+    width: 450px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.input::placeholder {
+    color: #a0a0a0;
+}
+
+.input:focus {
+    border-color: #e63946;
+    outline: none;
+}

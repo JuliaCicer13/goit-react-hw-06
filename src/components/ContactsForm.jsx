@@ -1,7 +1,7 @@
 import { Button } from '../components/Button';
 import { useDispatch } from "react-redux";
 import { addContact } from "../redux/contactsSlice";
-
+import styles from "../components/styles/ContactsForm.module.css"
 export const ContactsForm = () => {
 
   const dispatch = useDispatch();
@@ -19,10 +19,10 @@ export const ContactsForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="name" placeholder="Enter task text..." />
-      <input type="text" name="number" placeholder="Enter number..."/>
-      <Button type="submit">Add contact</Button>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <input className={styles.field} type="text" name="name" placeholder="Enter task text..." />
+      <input className={styles.field} type="text" name="number" placeholder="Enter number..."/>
+      <Button className={styles.btn} type="submit">Add contact</Button>
     </form>
   );
 };

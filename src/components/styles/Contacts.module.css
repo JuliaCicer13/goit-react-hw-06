@@ -1,0 +1,22 @@
+
+.item {
+    background: linear-gradient(to right, #200122, #6f0000);
+    color: #d4af37;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.8);
+}
+
+.button {
+    background: #8b0000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-family: 'Creepster', cursive;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+}
