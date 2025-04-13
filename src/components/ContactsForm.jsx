@@ -12,16 +12,17 @@ export const ContactsForm = () => {
 
     dispatch(addContact({
 	    id: crypto.randomUUID(),
-	    completed: false,
-	    text: form.elements.text.value
+      name: form.elements.name.value,
+	    number: form.elements.number.value
 	  }));
     form.reset();
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" name="text" placeholder="Enter task text..." />
-      <Button type="submit">Add task</Button>
+      <input type="text" name="name" placeholder="Enter task text..." />
+      <input type="text" name="number" placeholder="Enter number..."/>
+      <Button type="submit">Add contact</Button>
     </form>
   );
 };

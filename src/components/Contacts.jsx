@@ -4,20 +4,18 @@ import { deleteContact} from "../redux/contactsSlice";
 import styles from '../components/styles/Contacts.module.css';
 import { GiVampireCape, GiFangs } from "react-icons/gi";
 
-export default function Contacts({ items, id, name, number}) {
+export default function Contacts({contact}) {
   const dispatch = useDispatch();
-
-  const handleDelete = () => dispatch(deleteContact( items.id));
+  const handleDelete = () => dispatch(deleteContact(contact.id));
 
  return (
   <li className={styles.item}>
     <div className={styles.container}>
-    <p className={styles.name}><GiVampireCape className={styles.info}/> {name}</p>
-    <p className={styles.number}> <GiFangs className={styles.icon}/> {number}</p> 
+    <p className={styles.name}><GiVampireCape className={styles.info}/> {contact.name}</p>
+    <p className={styles.number}> <GiFangs className={styles.icon}/> {contact.number}</p> 
     </div>
    
-    <button onClick={() =>
-      handleDelete(id)} className={styles.button} type='submit'>Delete</button> 
+    <button onClick={handleDelete} className={styles.button} type='submit'>Delete</button> 
   </li>
         )
 }
