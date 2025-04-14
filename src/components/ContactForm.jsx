@@ -1,8 +1,8 @@
-import { Button } from '../components/Button';
+import { Button } from './Button';
 import { useDispatch } from "react-redux";
 import { addContact } from "../redux/contactsSlice";
 import styles from "../components/styles/ContactsForm.module.css"
-export const ContactsForm = () => {
+export const ContactForm = () => {
 
   const dispatch = useDispatch();
 
