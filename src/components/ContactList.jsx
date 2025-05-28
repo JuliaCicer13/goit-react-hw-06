@@ -19,7 +19,7 @@ export const ContactList = () => {
         <ul className={styles.list}>
             {visibleContacts.map(( item) => (
                 <li key={ item.id} >
-                    <Contact contact={ item} />
+                    <Contact contact={item} />
                 </li>
             ))}
         </ul>
